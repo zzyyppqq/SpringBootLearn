@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: SpringBootLearn
+
+    profiles:
+      active: dev # 默认加载的Profile，可以在启动是通过修改spring.profiles.active属性来变更
+
+
+server: # Spring Boot内置的配置项，用于配置Web服务器相关参数
+  port: 8888 # 服务端口号
+  servlet:
+    encoding: # 编码强制都使用UTF-8
+      force: true # 强制覆盖charset
+      charset: UTF-8
+
+welcome: # 自定义的配置
+  content: 'Welcome to the basic non env'

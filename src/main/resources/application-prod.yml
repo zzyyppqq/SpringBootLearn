@@ -1,0 +1,9 @@
+
+# application-prod.yml
+spring:
+  config:
+    import: conf/prod/datasource.yml
+
+
+welcome: # 自定义的配置
+  content: 'Welcome to the production env'
