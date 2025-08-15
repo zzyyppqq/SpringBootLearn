@@ -3,6 +3,5 @@ spring:
   config:
     import: conf/dev/datasource.yml
 
-
 welcome: # 自定义的配置
   content: 'Welcome to the development env'
