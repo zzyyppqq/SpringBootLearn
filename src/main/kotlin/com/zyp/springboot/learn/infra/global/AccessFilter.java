@@ -51,8 +51,11 @@ public class AccessFilter extends OncePerRequestFilter {
 
         try {
             filterChain.doFilter(req, resp);
-        } catch (Throwable throwable) {
+        } catch (Throwable throwable) {// 2. 捕获所有未捕获的异常
             // 错误处理统一委托给HandlerExceptionResolver
+            // 捕获到异常后，不是直接处理，而是委托给了HandlerExceptionResolver Bean。
+            // 这个HandlerExceptionResolver的实现中有一个ExceptionHandlerExceptionResolver类，它会在发生异常时查找匹配的@ExceptionHandler方法并执行相应的处理。
+            // 也就是说，它会自动找到我们刚才定义的GlobalExceptionHandler类中的@ExceptionHandler方法。
             if (throwable instanceof Exception ex) {
                 resolver.resolveException(req, resp, null, ex);
             } else {

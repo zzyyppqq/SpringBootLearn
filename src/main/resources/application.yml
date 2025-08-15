@@ -12,7 +12,7 @@ logging:
     root: DEBUG
 
 server: # Spring Boot内置的配置项，用于配置Web服务器相关参数
-  port: 8888 # 服务端口号
+  port: 8088 # 服务端口号
   servlet:
     encoding: # 编码强制都使用UTF-8
       force: true # 强制覆盖charset

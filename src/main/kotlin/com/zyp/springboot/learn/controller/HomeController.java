@@ -1,5 +1,8 @@
 package com.zyp.springboot.learn.controller;
 
+import com.zyp.springboot.learn.dto.RespDTO;
+import com.zyp.springboot.learn.infra.errorcode.BusinessException;
+import com.zyp.springboot.learn.infra.security.IgnorePermission;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -17,8 +20,29 @@ public class HomeController {
     }
 
     @GetMapping("/") // 2. 定义这个API的url路径和可接收的Http Method（这里是GET）
-    public String home() {
-        return "Welcome Home";
+    public RespDTO<String> home() {
+        return RespDTO.ok(welcomeContent);
     }
 
+    @GetMapping("/system_error")
+    @IgnorePermission
+    public RespDTO<String> systemError() {
+        // {
+        //     "code": 10001,
+        //     "msg": "系统异常，请稍后重试",
+        //     "data": null
+        // }
+        return RespDTO.systemError("test system error");
+    }
+
+    @GetMapping("/system_error_test")
+    public RespDTO<String> systemErrorTest() {
+        // 返回值
+        // {
+        //     "code": 10001,
+        //     "msg": "系统异常，请稍后重试",
+        //     "data": null
+        // }
+        throw new BusinessException("test exception");
+    }
 }
