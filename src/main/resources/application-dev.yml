@@ -3,6 +3,9 @@ spring:
   config:
     import: conf/dev/datasource.yml
 
+jwt:
+  secret: EJogTbY8zF5ANCWy8oxpJaqAbs6t5ZE4bGjxgO5hxfXmKUn3enqBX7jifUgfV5Z0
+  expire-minutes: 14400
 
 welcome: # 自定义的配置
   content: 'Welcome to the development env'

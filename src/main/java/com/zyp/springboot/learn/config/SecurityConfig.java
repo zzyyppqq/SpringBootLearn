@@ -5,11 +5,13 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityCustomizer;
+import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.servlet.HandlerExceptionResolver;
+import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
 
 /**
  * 打开本地的浏览器，访问http://localhost:8080。此时会重定向到登录页面，
@@ -23,7 +25,11 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http, HandlerExceptionResolver resolver) throws Exception {
         // 1. 打开cors
         http.cors(Customizer.withDefaults());
-
+        // 基于token的内部HTTP服务不需要csrf和session
+        http.csrf(AbstractHttpConfigurer::disable)
+                .sessionManagement(session ->
+                        session.sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+                );
         // 访问http://localhost:8088/druid/index.html登陆账号密码有HTTP 403错误，可能是Spring Security拦截了请求。需在安全配置中添加白名单
         http.csrf().disable().authorizeHttpRequests((requests) -> requests
                 .antMatchers("/druid/**").permitAll());

@@ -2,6 +2,8 @@ package com.zyp.springboot.learn.infra.global;
 
 
 
+import com.auth0.jwt.exceptions.JWTDecodeException;
+import com.auth0.jwt.exceptions.TokenExpiredException;
 import com.zyp.springboot.learn.dto.RespDTO;
 import com.zyp.springboot.learn.infra.errorcode.BusinessException;
 import com.zyp.springboot.learn.infra.errorcode.SystemErrorCode;
@@ -63,12 +65,6 @@ public class GlobalExceptionHandler {
         }
     }
 
-//    @ExceptionHandler(value = TokenExpiredException.class)
-//    public ResponseEntity<RespDTO<?>> tokenExpire(HttpServletRequest request, Throwable e) {
-//        log.error("tokenExpired", e);
-//        return ResponseEntity.status(HttpStatus.FORBIDDEN).body(RespDTO.error(SystemErrorCode.INVALID_TOKEN));
-//    }
-
     @ExceptionHandler(value = AuthenticationException.class)
     public ResponseEntity<RespDTO<?>> authenticationError(HttpServletRequest request, Throwable e) {
         log.error("invalid token", e);
@@ -81,13 +77,19 @@ public class GlobalExceptionHandler {
         return ResponseEntity.status(HttpStatus.FORBIDDEN).body(RespDTO.error(SystemErrorCode.NO_PERMISSION));
     }
 
-//    @ExceptionHandler(value = JWTDecodeException.class)
-//    public ResponseEntity<RespDTO<?>> jwtDecodeError(HttpServletRequest request, Throwable e) {
-//        log.error("invalid token", e);
-//        return ResponseEntity
-//                .status(HttpStatus.FORBIDDEN)
-//                .body(RespDTO.errorMsg(SystemErrorCode.NO_PERMISSION, "无效的Token"));
-//    }
+    @ExceptionHandler(value = TokenExpiredException.class)
+    public ResponseEntity<RespDTO<?>> tokenExpire(HttpServletRequest request, Throwable e) {
+        log.error("tokenExpired", e);
+        return ResponseEntity.status(HttpStatus.FORBIDDEN).body(RespDTO.error(SystemErrorCode.INVALID_TOKEN));
+    }
+
+    @ExceptionHandler(value = JWTDecodeException.class)
+    public ResponseEntity<RespDTO<?>> jwtDecodeError(HttpServletRequest request, Throwable e) {
+        log.error("invalid token", e);
+        return ResponseEntity
+                .status(HttpStatus.FORBIDDEN)
+                .body(RespDTO.errorMsg(SystemErrorCode.NO_PERMISSION, "无效的Token"));
+    }
 
 
 }
