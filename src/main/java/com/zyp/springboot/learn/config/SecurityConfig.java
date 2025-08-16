@@ -24,7 +24,7 @@ public class SecurityConfig {
         // 1. 打开cors
         http.cors(Customizer.withDefaults());
 
-        // 有HTTP 403错误，可能是Spring Security拦截了请求。需在安全配置中添加白名单
+        // 访问http://localhost:8088/druid/index.html登陆账号密码有HTTP 403错误，可能是Spring Security拦截了请求。需在安全配置中添加白名单
         http.csrf().disable().authorizeHttpRequests((requests) -> requests
                 .antMatchers("/druid/**").permitAll());
 

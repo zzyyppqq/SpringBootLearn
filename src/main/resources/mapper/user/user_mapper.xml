@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zyp.springboot.learn.repository.UserDao">
+    <select id="getByUsername" resultType="com.zyp.springboot.learn.entity.UserEntity">
+        SELECT * FROM user WHERE username = #{username}
+        LIMIT 1
+    </select>
+</mapper>
