@@ -1,5 +1,10 @@
 package com.zyp.springboot.learn.config;
 
+import com.zyp.springboot.learn.infra.security.SecurityAuthenticationEntryPoint;
+import com.zyp.springboot.learn.infra.security.SecurityTokenFilter;
+import com.zyp.springboot.learn.service.token.TokenService;
+import com.zyp.springboot.learn.service.user.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.Customizer;
@@ -7,6 +12,7 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityCustomizer;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
@@ -20,6 +26,10 @@ import org.springframework.security.config.annotation.web.configurers.AbstractHt
  */
 @Configuration // 1. 表示这是一个配置类
 public class SecurityConfig {
+    @Autowired
+    private TokenService tokenService;
+    @Autowired
+    private UserService userService;
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http, HandlerExceptionResolver resolver) throws Exception {
@@ -34,9 +44,22 @@ public class SecurityConfig {
         http.csrf().disable().authorizeHttpRequests((requests) -> requests
                 .antMatchers("/druid/**").permitAll());
 
-        // 2. 暂时先允许所有接口的匿名访问
+        // // 认证模块，位置保持跟UsernamePasswordAuthenticationFilter一致
+        http.addFilterBefore(
+                new SecurityTokenFilter(tokenService, userService),
+                UsernamePasswordAuthenticationFilter.class);
+
         http.authorizeHttpRequests((requests) -> requests
-                .antMatchers("/**").permitAll()); //
+                // 暂时先允许所有接口的匿名访问
+                //.antMatchers("/**").permitAll()
+                // 除了/login外都要认证通过后才能调用
+                .antMatchers("/login").permitAll()
+                .anyRequest().authenticated()
+        );
+        /// 自定义错误处理机制，返回标准的登录失败结构
+        http.exceptionHandling(exceptionHandling ->
+                exceptionHandling.authenticationEntryPoint(
+                        new SecurityAuthenticationEntryPoint(resolver)));
         return http.build();
     }
 
