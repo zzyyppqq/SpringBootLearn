@@ -5,7 +5,7 @@ package com.zyp.springboot.learn.infra.global;
 import com.zyp.springboot.learn.dto.RespDTO;
 import com.zyp.springboot.learn.infra.errorcode.BusinessException;
 import com.zyp.springboot.learn.infra.errorcode.SystemErrorCode;
-import jakarta.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletRequest;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.TypeMismatchException;

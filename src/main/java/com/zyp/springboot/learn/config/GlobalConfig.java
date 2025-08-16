@@ -1,5 +1,7 @@
 package com.zyp.springboot.learn.config;
 
+import com.alibaba.druid.support.http.WebStatFilter;
+import com.zyp.springboot.learn.constant.HttpHeader;
 import com.zyp.springboot.learn.infra.errorcode.ErrorCodeRegister;
 import com.zyp.springboot.learn.infra.global.AccessFilter;
 import lombok.extern.slf4j.Slf4j;
@@ -9,21 +11,26 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.HandlerExceptionResolver;
 
+import java.util.Set;
+
 @Slf4j
 @Configuration
 public class GlobalConfig {
-    @Bean
-    public static ErrorCodeRegister Init() {
-        log.info("GlobalConfig Init");
-        ErrorCodeRegister.init();
-        return new ErrorCodeRegister();
-    }
 
     @Bean
+    public static void Init() {
+        log.info("GlobalConfig Init");
+        ErrorCodeRegister.init();
+    }
+    @Bean
     public static FilterRegistrationBean<AccessFilter> accessFilter(@Qualifier("handlerExceptionResolver") HandlerExceptionResolver resolver) {
-        log.info("GlobalConfig accessFilter");
         var accessFilter = new AccessFilter(resolver);
-        /** 其它属性配置 **/
+        accessFilter.setIncludeHeaders(true);
+        accessFilter.setIncludePayload(true);
+        accessFilter.setIncludeResponse(true);
+        accessFilter.setIncludeQueryString(true);
+        accessFilter.setMaxResponseLength(1024 * 1024);
+        accessFilter.setMaskHeaders(Set.of(HttpHeader.X_Access_Token));
         var registrationBean = new FilterRegistrationBean<AccessFilter>();
         registrationBean.setFilter(accessFilter);
         registrationBean.addUrlPatterns("/*");

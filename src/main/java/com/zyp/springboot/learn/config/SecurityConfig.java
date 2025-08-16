@@ -25,14 +25,14 @@ public class SecurityConfig {
         http.cors(Customizer.withDefaults());
         // 2. 暂时先允许所有接口的匿名访问
         http.authorizeHttpRequests((requests) -> requests
-                .requestMatchers("/**").permitAll()); //
+                .antMatchers("/**").permitAll()); //
         return http.build();
     }
 
     @Bean
     public static WebSecurityCustomizer webSecurityCustomizer() {
         // 这里ignore的就完全不会进入Security栈了
-//        return (web -> web.ignoring().requestMatchers("/*"));
+//        return (web -> web.ignoring().antMatchers("/*"));
         // 3. 所有url要走security栈
         // Spring MVC也有CORS控制，但是我们希望CORS也都统一在Security栈。
         return (web -> {});

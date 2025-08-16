@@ -1,0 +1,13 @@
+INSERT INTO power_admin.role_permission (id, role_id, permission_id, create_time, update_time) VALUES (1000002, 1000000, 1000000, 1693445195815, 1693445195815);
+INSERT INTO power_admin.role_permission (id, role_id, permission_id, create_time, update_time) VALUES (1000004, 1000001, 1000002, 1693645112544, 1693645112544);
+INSERT INTO power_admin.role_permission (id, role_id, permission_id, create_time, update_time) VALUES (1000005, 1000000, 1000002, 1693645117582, 1693645117582);
+INSERT INTO power_admin.role_permission (id, role_id, permission_id, create_time, update_time) VALUES (1000006, 1000000, 1000001, 1693645124423, 1693645124423);
+INSERT INTO power_admin.role_permission (id, role_id, permission_id, create_time, update_time) VALUES (1000007, 1000000, 1000010, 1693702720791, 1693702720791);
+INSERT INTO power_admin.role_permission (id, role_id, permission_id, create_time, update_time) VALUES (1000008, 1000000, 1000009, 1693702720791, 1693702720791);
+INSERT INTO power_admin.role_permission (id, role_id, permission_id, create_time, update_time) VALUES (1000009, 1000000, 1000008, 1693702720791, 1693702720791);
+INSERT INTO power_admin.role_permission (id, role_id, permission_id, create_time, update_time) VALUES (1000010, 1000000, 1000007, 1693702720791, 1693702720791);
+INSERT INTO power_admin.role_permission (id, role_id, permission_id, create_time, update_time) VALUES (1000011, 1000000, 1000006, 1693702720791, 1693702720791);
+INSERT INTO power_admin.role_permission (id, role_id, permission_id, create_time, update_time) VALUES (1000012, 1000000, 1000005, 1693702720791, 1693702720791);
+INSERT INTO power_admin.role_permission (id, role_id, permission_id, create_time, update_time) VALUES (1000013, 1000000, 1000004, 1693702720791, 1693702720791);
+INSERT INTO power_admin.role_permission (id, role_id, permission_id, create_time, update_time) VALUES (1000014, 1000000, 1000003, 1693702720791, 1693702720791);
+INSERT INTO power_admin.role_permission (id, role_id, permission_id, create_time, update_time) VALUES (1000016, 1000001, 1000007, 1693967400098, 1693967400098);

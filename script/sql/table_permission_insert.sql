@@ -1,0 +1,11 @@
+INSERT INTO power_admin.permission (id, type, name, description, create_time, update_time) VALUES (1000000, 2, 'users_and_permissions', '用户和权限菜单', 1693016752310, 1693016752310);
+INSERT INTO power_admin.permission (id, type, name, description, create_time, update_time) VALUES (1000001, 3, 'menu_manage', '菜单管理', 1693016752310, 1693963539470);
+INSERT INTO power_admin.permission (id, type, name, description, create_time, update_time) VALUES (1000002, 1, 'basic', '所有角色通用的基本权限', 1693016752310, 1693016752310);
+INSERT INTO power_admin.permission (id, type, name, description, create_time, update_time) VALUES (1000003, 1, 'menus::read', '菜单读取权限', 1693702379474, 1693702379474);
+INSERT INTO power_admin.permission (id, type, name, description, create_time, update_time) VALUES (1000004, 1, 'menus::write', '菜单写权限', 1693702409565, 1693702409565);
+INSERT INTO power_admin.permission (id, type, name, description, create_time, update_time) VALUES (1000005, 1, 'permissions::read', '权限读权限', 1693702467788, 1693702467788);
+INSERT INTO power_admin.permission (id, type, name, description, create_time, update_time) VALUES (1000006, 1, 'permissions::write', '权限写权限', 1693702487003, 1693702487003);
+INSERT INTO power_admin.permission (id, type, name, description, create_time, update_time) VALUES (1000007, 1, 'roles::read', '角色读权限', 1693702550623, 1693702550623);
+INSERT INTO power_admin.permission (id, type, name, description, create_time, update_time) VALUES (1000008, 1, 'roles::write', '角色写权限', 1693702568151, 1693702568151);
+INSERT INTO power_admin.permission (id, type, name, description, create_time, update_time) VALUES (1000009, 1, 'users::read', '用户读权限', 1693702658999, 1693702658999);
+INSERT INTO power_admin.permission (id, type, name, description, create_time, update_time) VALUES (1000010, 1, 'users::write', '用户写权限', 1693702672367, 1694073157106);

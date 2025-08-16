@@ -1,7 +1,7 @@
 package com.zyp.springboot.learn.util;
 
 import com.zyp.springboot.learn.constant.HttpHeader;
-import jakarta.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletRequest;
 import org.springframework.web.util.ContentCachingRequestWrapper;
 
 import java.io.UnsupportedEncodingException;
