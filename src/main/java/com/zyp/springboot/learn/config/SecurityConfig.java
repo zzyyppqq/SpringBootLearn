@@ -23,6 +23,11 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http, HandlerExceptionResolver resolver) throws Exception {
         // 1. 打开cors
         http.cors(Customizer.withDefaults());
+
+        // 有HTTP 403错误，可能是Spring Security拦截了请求。需在安全配置中添加白名单
+        http.csrf().disable().authorizeHttpRequests((requests) -> requests
+                .antMatchers("/druid/**").permitAll());
+
         // 2. 暂时先允许所有接口的匿名访问
         http.authorizeHttpRequests((requests) -> requests
                 .antMatchers("/**").permitAll()); //

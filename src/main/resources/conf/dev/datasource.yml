@@ -17,3 +17,12 @@ spring:
           log-slow-sql: true
           slow-sql-log-level: WARN
           slow-sql-millis: 1000
+      stat-view-servlet:
+        enabled: true
+        url-pattern: /druid/*
+        login-username: admin
+        login-password: admin
+        web-stat-filter:
+          enabled: true
+          url-pattern: /*
+          exclusions: "*.js,*.css,/druid/*"
