@@ -10,8 +10,11 @@ import java.util.function.Consumer;
 
 
 public class JwtUtils {
-    private final static String ISSUER = "bytewise.pa";
+    private final static String ISSUER = "com.zyp.springboot.learn";
 
+    /**
+     * 在登录成功后，生成一个JWT Token来表示用户的登录状态
+     */
     public static String create(String secret, long expireMinutes, Consumer<JWTCreator.Builder> customClaim) {
         LocalDateTime now = LocalDateTime.now();
         Algorithm algorithm = Algorithm.HMAC512(secret);

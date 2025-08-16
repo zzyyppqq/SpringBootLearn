@@ -1,0 +1,22 @@
+###
+POST {{baseUrl}}/login
+Content-Type: application/json
+
+{
+    "username": "admin",
+    "password": "123456"
+}
+
+> {%
+    client.test("Request executed successfully", function() {
+      client.assert(response.status === 200, "Response status is not 200")
+    });
+    client.global.set("token", response.body.data.token)
+    client.log("response.body.data.token: " + response.body.data.token)
+%}
+
+###
+GET {{baseUrl}}/current_user
+Accept: application/json
+Authorization: {{ token }}
+X-Access-Token: {{ token }}
