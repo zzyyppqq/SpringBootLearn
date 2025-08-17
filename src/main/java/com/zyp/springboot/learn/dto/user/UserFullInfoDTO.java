@@ -1,6 +1,7 @@
 package com.zyp.springboot.learn.dto.user;
 
 import com.zyp.springboot.learn.dto.auth.permission.PermissionDTO;
+import com.zyp.springboot.learn.dto.auth.role.RoleDTO;
 import lombok.Data;
 import org.springframework.security.core.context.SecurityContextHolder;
 
@@ -13,6 +14,7 @@ public class UserFullInfoDTO {
     private String username;
     private String nickName;
     private List<PermissionDTO> permissions = new ArrayList<>();
+    private List<RoleDTO> roles = new ArrayList<>();
 
     public static UserFullInfoDTO currentUser() {
         var authentication = SecurityContextHolder.getContext().getAuthentication();

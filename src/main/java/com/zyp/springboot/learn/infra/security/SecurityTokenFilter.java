@@ -50,7 +50,9 @@ public class SecurityTokenFilter extends OncePerRequestFilter {
                 var authenticationToken = new UsernamePasswordAuthenticationToken(
                         userData.getUsername(),
                         "********",
-                        buildAuthorities(userData.getPermissions()));
+                        // 简单的模型转换，将我们的权限数据模型转换为Spring Security的规范模型
+                        buildAuthorities(userData.getPermissions()));                      // 简单的模型转换，将我们的权限数据模型转换为Spring Security的规范模型
+
                 authenticationToken.setDetails(userData);
                 // 这是表示认证通过的核心代码
                 SecurityContextHolder.getContext().setAuthentication(authenticationToken);
