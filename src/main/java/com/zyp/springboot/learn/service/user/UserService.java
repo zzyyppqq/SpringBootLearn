@@ -9,11 +9,9 @@ import com.zyp.springboot.learn.constant.SpecialUsername;
 import com.zyp.springboot.learn.dto.RespDTO;
 import com.zyp.springboot.learn.dto.auth.permission.PermissionDTO;
 import com.zyp.springboot.learn.dto.auth.role.RoleDTO;
+import com.zyp.springboot.learn.dto.menu.MenuTree;
 import com.zyp.springboot.learn.dto.user.*;
-import com.zyp.springboot.learn.entity.PermissionEntity;
-import com.zyp.springboot.learn.entity.RoleEntity;
-import com.zyp.springboot.learn.entity.UserEntity;
-import com.zyp.springboot.learn.entity.UserRoleEntity;
+import com.zyp.springboot.learn.entity.*;
 import com.zyp.springboot.learn.infra.errorcode.BusinessException;
 import com.zyp.springboot.learn.infra.errorcode.SystemErrorCode;
 import com.zyp.springboot.learn.repository.UserDao;
@@ -21,6 +19,7 @@ import com.zyp.springboot.learn.service.BaseService;
 import com.zyp.springboot.learn.service.auth.PermissionService;
 import com.zyp.springboot.learn.service.auth.RoleService;
 import com.zyp.springboot.learn.service.auth.UserRoleService;
+import com.zyp.springboot.learn.service.menu.MenuService;
 import com.zyp.springboot.learn.util.BcryptUtils;
 import com.zyp.springboot.learn.util.BeanUtils;
 import com.zyp.springboot.learn.util.StrUtils;
@@ -38,10 +37,11 @@ public class UserService extends BaseService<UserDao, UserEntity> {
     private UserRoleService userRoleService;
     @Autowired
     private RoleService roleService;
-//    @Autowired
-//    private MenuService menuService;
+    @Autowired
+    private MenuService menuService;
     @Autowired
     private PermissionService permissionService;
+
     public RespDTO<LoginUserDetails> login(UserLoginReq req) {
         var resp = new LoginUserDetails();
         // 按用户名从数据库查找用户
@@ -80,13 +80,13 @@ public class UserService extends BaseService<UserDao, UserEntity> {
     private void fillRoleAndPermission(UserFullInfoDTO userData) {
         var uid = userData.getUid();
         var username = userData.getUsername();
-//        List<MenuEntity> authorizedMenu;
+        List<MenuEntity> authorizedMenu;  // 按权限过滤后的菜单项列表
         List<PermissionEntity> permissions;
         List<RoleEntity> roles;
-//        List<MenuEntity> allMenu = menuService.list();
+        List<MenuEntity> allMenu = menuService.list();
         // super用户特殊处理，拥有所有的角色和权限
         if (SpecialUsername.SUPER.equals(username)) {
-//            authorizedMenu = allMenu;
+            authorizedMenu = allMenu;// super用户特殊处理，可访问所有菜单项
             permissions = permissionService.list();
             roles = roleService.list();
         } else {
@@ -94,14 +94,16 @@ public class UserService extends BaseService<UserDao, UserEntity> {
             List<Long> roleIdList = roles.stream().map(RoleEntity::getId).toList();
             // 角色拥有的权限列表
             permissions = roleService.permissions(roleIdList);
-//            authorizedMenu = allMenu.stream().filter(m ->
-//                    permissions.stream().anyMatch(p -> Objects.equals(p.getId(), m.getPermissionId()))).toList();
+            // 按权限过滤菜单项
+            authorizedMenu = allMenu.stream().filter(m ->
+                    permissions.stream().anyMatch(p -> Objects.equals(p.getId(), m.getPermissionId()))).toList();
         }
-//        MenuTree root = MenuService.buildMenuTree(authorizedMenu);
+        // 构建菜单数
+        MenuTree root = MenuService.buildMenuTree(authorizedMenu);
         // 简单的模型转换，从实体类转成DTO
         userData.setPermissions(permissions.stream().map(PermissionDTO::from).toList());
         userData.setRoles(roles.stream().map(RoleDTO::from).toList());
-//        userData.setMenuTree(root);
+        userData.setMenuTree(root);
     }
 
     public boolean add(UserAddReq req) {
