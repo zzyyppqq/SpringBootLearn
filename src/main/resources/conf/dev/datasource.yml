@@ -1,9 +1,9 @@
 spring:
   datasource:
     name: power_admin
-    url: jdbc:mysql://192.168.50.62:3306/power_admin?autoReconnect=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    url: jdbc:mysql://192.168.2.99:3306/power_admin?autoReconnect=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
     username: root
-    password: 123456
+    password: 12345678
     driver-class-name: com.mysql.cj.jdbc.Driver
 #    type: com.alibaba.druid.pool.DruidDataSource
     druid:

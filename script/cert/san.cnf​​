@@ -1,0 +1,15 @@
+[req]
+distinguished_name = req_distinguished_name
+x509_extensions = v3_req
+prompt = no
+
+[req_distinguished_name]
+C = CN
+ST = JiangSu
+L = NanJing
+O = ZYP
+OU = ZYP
+CN = zyp.com
+
+[v3_req]
+subjectAltName = DNS:zyp.com,IP:127.0.0.1

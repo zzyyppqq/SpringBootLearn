@@ -14,7 +14,22 @@ logging:
     com.alibaba.druid: DEBUG
 
 server: # Spring Boot内置的配置项，用于配置Web服务器相关参数
-  port: 8088 # 服务端口号
+#  port: 8088 # 服务端口号
+#  The accepted certificate will be saved in truststore /Users/aecg/Library/Application Support/JetBrains/IntelliJIdea2023.3/ssl/cacerts with the default password changeitv
+  port: 8443 # 服务端口号
+  ssl:
+    # 服务证书
+    key-store: classpath:cert/server.p12
+    key-store-password: 123456
+    key-password: 123456
+    key-store-type: PKCS12
+    key-alias: 1
+    # CA证书
+    trust-store: classpath:cert/ca.p12
+    trust-store-password: 123456
+    trust-store-type: PKCS12
+  http2:
+    enabled: true
   servlet:
     encoding: # 编码强制都使用UTF-8
       force: true # 强制覆盖charset

@@ -12,6 +12,7 @@ import java.util.Arrays;
 
 /**
  * 有一个小细节，就是去掉默认的MVC错误处理[ErrorMvcAutoConfiguration.class]，它在异常发生时会返回错误页面，并不适用于API服务。
+ * @SpringBootApplication = @ComponentScan + @EnableAutoConfiguration + @Configuration
  */
 @Slf4j
 @SpringBootApplication(exclude = {ErrorMvcAutoConfiguration.class})
