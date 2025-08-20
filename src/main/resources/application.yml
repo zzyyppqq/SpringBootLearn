@@ -10,14 +10,14 @@ logging:
     path: logs
     name: ''  # 清空文件名，不生成日志文件
   level:
-    root: DEBUG
-#    root: INFO # 控制台仍输出INFO及以上级别日志
+    #    root: DEBUG
+    root: INFO # 控制台仍输出INFO及以上级别日志
     org.springframework.jdbc: DEBUG
     com.alibaba.druid: DEBUG
 
 server: # Spring Boot内置的配置项，用于配置Web服务器相关参数
-#  port: 8088 # 服务端口号
-#  The accepted certificate will be saved in truststore /Users/aecg/Library/Application Support/JetBrains/IntelliJIdea2023.3/ssl/cacerts with the default password changeitv
+  #  port: 8088 # 服务端口号
+  #  The accepted certificate will be saved in truststore /Users/aecg/Library/Application Support/JetBrains/IntelliJIdea2023.3/ssl/cacerts with the default password changeitv
   port: 8443 # 服务端口号
   ssl:
     # 服务证书
@@ -39,3 +39,16 @@ server: # Spring Boot内置的配置项，用于配置Web服务器相关参数
 
 welcome: # 自定义的配置
   content: 'Welcome to the basic non env'
+
+
+my:
+  service:
+    enabled: true
+    remote-address: 192.168.1.1
+    security:
+      username: "admin"
+      password: "123456"
+      roles:
+        - "USER"
+        - "ADMIN"
+

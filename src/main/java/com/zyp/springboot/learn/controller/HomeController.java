@@ -1,11 +1,15 @@
 package com.zyp.springboot.learn.controller;
 
+import com.zyp.springboot.learn.configProperties.MyProperties;
 import com.zyp.springboot.learn.dto.RespDTO;
 import com.zyp.springboot.learn.infra.errorcode.BusinessException;
 import com.zyp.springboot.learn.infra.security.IgnorePermission;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import javax.annotation.security.PermitAll;
 
 @RestController // 1. 加上这个注解，方法的返回值会自动序列化为JSON
 public class HomeController {
@@ -14,12 +18,22 @@ public class HomeController {
     @Value("${welcome.content}") // 1. Spring会自动将配置文件中的内容注入
     private String welcomeContent;
 
+    @Autowired
+    MyProperties properties;
+
+    @GetMapping("/test/my_properties")
+    @IgnorePermission
+    public MyProperties myProperties() {
+        return properties;
+    }
+
     @GetMapping("/env")
     public String env() {
         return welcomeContent; // 2. 改为返回配置文件的内容
     }
 
     @GetMapping("/") // 2. 定义这个API的url路径和可接收的Http Method（这里是GET）
+    @IgnorePermission
     public RespDTO<String> home() {
         return RespDTO.ok(welcomeContent);
     }
@@ -45,4 +59,5 @@ public class HomeController {
         // }
         throw new BusinessException("test exception");
     }
+
 }

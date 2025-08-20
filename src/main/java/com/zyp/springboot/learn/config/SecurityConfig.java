@@ -49,12 +49,14 @@ public class SecurityConfig {
                 new SecurityTokenFilter(tokenService, userService),
                 UsernamePasswordAuthenticationFilter.class);
 
+        // Token 验证
         http.authorizeHttpRequests((requests) -> requests
                 // 暂时先允许所有接口的匿名访问
                 //.antMatchers("/**").permitAll()
                 // 除了/login外都要认证通过后才能调用
                 .antMatchers("/login").permitAll()
-                .anyRequest().authenticated()
+                .antMatchers("/test/*").permitAll()
+                .anyRequest().authenticated() // 其他路径需认证v
         );
         /// 自定义错误处理机制，返回标准的登录失败结构
         http.exceptionHandling(exceptionHandling ->
