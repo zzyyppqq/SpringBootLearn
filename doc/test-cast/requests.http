@@ -28,3 +28,7 @@ GET {{baseUrl}}/permissions?page=1&size=1
 Accept: application/json
 Authorization: {{ token }}
 X-Access-Token: {{ token }}
+
+
+###
+WEBSOCKET wss://127.0.0.1:8443/ws

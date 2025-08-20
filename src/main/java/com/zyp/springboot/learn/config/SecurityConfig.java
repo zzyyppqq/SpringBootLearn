@@ -42,7 +42,9 @@ public class SecurityConfig {
                 );
         // 访问http://localhost:8088/druid/index.html登陆账号密码有HTTP 403错误，可能是Spring Security拦截了请求。需在安全配置中添加白名单
         http.csrf().disable().authorizeHttpRequests((requests) -> requests
-                .antMatchers("/druid/**").permitAll());
+                .antMatchers("/druid/**").permitAll()
+                .antMatchers("/ws/**").permitAll()
+        );
 
         // // 认证模块，位置保持跟UsernamePasswordAuthenticationFilter一致
         http.addFilterBefore(
