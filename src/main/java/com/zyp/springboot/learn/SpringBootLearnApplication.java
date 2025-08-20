@@ -20,11 +20,13 @@ public class SpringBootLearnApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(SpringBootLearnApplication.class, args);
-
+        log.info("启动成功: {}", Thread.currentThread().getName());
     }
 
     @Bean
     public CommandLineRunner commandLineRunner(ApplicationContext ctx) {
+        System.out.println("CommandLineRunner");
+        if (true) return args -> {};
         return args -> {
             log.debug("============== All Beans ====================");
             for (var beanDefinitionName : ctx.getBeanDefinitionNames()) {

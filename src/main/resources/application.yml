@@ -8,8 +8,10 @@ spring:
 logging:
   file:
     path: logs
+    name: ''  # 清空文件名，不生成日志文件
   level:
     root: DEBUG
+#    root: INFO # 控制台仍输出INFO及以上级别日志
     org.springframework.jdbc: DEBUG
     com.alibaba.druid: DEBUG
 
