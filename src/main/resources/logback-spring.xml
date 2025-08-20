@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+Spring Boot包括一些对Logback的扩展，可以帮助进行高级配置。 你可以在你的 logback-spring.xml 配置文件中使用这些扩展。
+因为标准的 logback.xml 配置文件被过早加载，你不能在其中使用扩展。 你需要使用 logback-spring.xml 或者定义一个 logging.config 属性。
+-->
 <configuration>
     <conversionRule conversionWord="clr" converterClass="org.springframework.boot.logging.logback.ColorConverter"/>
     <conversionRule conversionWord="wex"

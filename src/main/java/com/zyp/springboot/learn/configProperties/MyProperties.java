@@ -22,6 +22,7 @@ import java.util.List;
  * - "ADMIN"
  */
 @Data
+@Component //使用@Component修饰了，无需使用@Configuration和@Bean实例化了
 @ConfigurationProperties(prefix = "my.service")
 public class MyProperties {
     private boolean enabled;
