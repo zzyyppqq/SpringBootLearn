@@ -76,13 +76,15 @@ public class SecurityConfig {
         return (web -> {});
     }
 
+    // 通过 Spring 的 CorsFilter或 WebMvcConfigurer实现
     // 4. Spring Security的cors配置
     @Bean(value = "corsConfigurationSource") // 按名称注入的， 因此名称要固定不变
     public static CorsConfigurationSource corsConfigurationSource() {
         var configSource = new UrlBasedCorsConfigurationSource();
         var config = new CorsConfiguration();
         // 允许跨域访问
-        config.setAllowCredentials(true);
+        // 生产环境禁用 allowedOrigins("*")，明确指定域名
+        config.setAllowCredentials(true);// 启用 allowCredentials(true)时，必须限制域名并配合 HTTPS
         config.addAllowedOriginPattern("*");
         config.addAllowedHeader("*");
         config.addAllowedMethod("*");

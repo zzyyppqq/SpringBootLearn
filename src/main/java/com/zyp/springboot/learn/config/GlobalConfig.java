@@ -4,9 +4,11 @@ import com.alibaba.druid.support.http.WebStatFilter;
 import com.zyp.springboot.learn.constant.HttpHeader;
 import com.zyp.springboot.learn.infra.errorcode.ErrorCodeRegister;
 import com.zyp.springboot.learn.infra.global.AccessFilter;
+import com.zyp.springboot.learn.infra.global.AccessServlet;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
+import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.HandlerExceptionResolver;
@@ -37,5 +39,10 @@ public class GlobalConfig {
         registrationBean.setOrder(Integer.MIN_VALUE); // 确保它是第一个Filter
         return registrationBean;
     }
+
+//    @Bean
+//    public static ServletRegistrationBean<AccessServlet> accessBean() {
+//
+//    }
 
 }
