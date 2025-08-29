@@ -1,5 +1,6 @@
 package com.zyp.springboot.learn.config;
 
+import com.alibaba.druid.support.http.StatViewServlet;
 import com.alibaba.druid.support.http.WebStatFilter;
 import com.zyp.springboot.learn.constant.HttpHeader;
 import com.zyp.springboot.learn.infra.errorcode.ErrorCodeRegister;
@@ -24,6 +25,11 @@ public class GlobalConfig {
         log.info("GlobalConfig Init");
         ErrorCodeRegister.init();
     }
+
+    /**
+     * 看阿里实现
+     * @see com.alibaba.druid.spring.boot.autoconfigure.stat.DruidWebStatFilterConfiguration
+     */
     @Bean
     public static FilterRegistrationBean<AccessFilter> accessFilter(@Qualifier("handlerExceptionResolver") HandlerExceptionResolver resolver) {
         var accessFilter = new AccessFilter(resolver);
@@ -40,9 +46,15 @@ public class GlobalConfig {
         return registrationBean;
     }
 
-//    @Bean
-//    public static ServletRegistrationBean<AccessServlet> accessBean() {
-//
-//    }
+    /**
+     * 看阿里实现
+     * @see com.alibaba.druid.spring.boot.autoconfigure.stat.DruidStatViewServletConfiguration
+     */
+    @Bean
+    public static ServletRegistrationBean<AccessServlet> accessBean() {
+        ServletRegistrationBean registrationBean = new ServletRegistrationBean();
+        registrationBean.setServlet(new AccessServlet("web/resource"));
+        return registrationBean;
+    }
 
 }

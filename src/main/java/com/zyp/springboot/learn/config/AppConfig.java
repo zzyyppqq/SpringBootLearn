@@ -6,8 +6,10 @@ import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
 @Configuration
+@EnableAspectJAutoProxy // 启用AOP代理
 public class AppConfig {
     @Bean(initMethod="init", destroyMethod="close")
     MyDataSource createDataSource() {

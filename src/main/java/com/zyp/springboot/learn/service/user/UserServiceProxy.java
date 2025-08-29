@@ -6,6 +6,7 @@ import com.zyp.springboot.learn.dto.RespDTO;
 import com.zyp.springboot.learn.dto.user.*;
 import com.zyp.springboot.learn.entity.RoleEntity;
 import com.zyp.springboot.learn.entity.UserEntity;
+import com.zyp.springboot.learn.service.BaseService;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.List;
@@ -13,7 +14,7 @@ import java.util.Map;
 
 
 @Slf4j
-public class UserServiceProxy {
+public class UserServiceProxy extends UserService {
 
     private UserService service;
 
