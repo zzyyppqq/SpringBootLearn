@@ -15,7 +15,7 @@ import org.springframework.stereotype.Component;
 import javax.annotation.PostConstruct;
 
 @Slf4j
-@Component
+//@Component
 public class TestSpringOrder implements
         ApplicationContextAware,
         BeanFactoryAware,
@@ -28,36 +28,36 @@ public class TestSpringOrder implements
 
    @PostConstruct
    public void postConstruct() {
-      log.error("启动顺序:post-construct");
+      log.info("启动顺序:post-construct");
    }
 
    public void initMethod() {
-      log.error("启动顺序:init-method");
+      log.info("启动顺序:init-method");
    }
 
    @Override
    public void afterPropertiesSet() throws Exception {
-      log.error("启动顺序:afterPropertiesSet");
+      log.info("启动顺序:afterPropertiesSet");
    }
 
    @Override
    public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
-      log.error("启动顺序:setApplicationContext");
+      log.info("启动顺序:setApplicationContext");
    }
 
    @Override
    public void setBeanFactory(BeanFactory beanFactory) throws BeansException {
-      log.error("启动顺序:setBeanFactory");
+      log.info("启动顺序:setBeanFactory");
    }
 
    @Override
    public void setBeanName(String name) {
-      log.error("启动顺序:setBeanName: {}", name);
+      log.info("启动顺序:setBeanName: {}", name);
    }
 
    @Override
    public void afterSingletonsInstantiated() {
-      log.error("启动顺序:afterSingletonsInstantiated");
+      log.info("启动顺序:afterSingletonsInstantiated");
       //Http、MQ、Rpc 入口流量必须在 SmartInitializingSingleton 之后开启流量。
    }
 
@@ -68,18 +68,18 @@ public class TestSpringOrder implements
 
    @Override
    public void onApplicationEvent(ContextRefreshedEvent event) {
-      log.error("启动顺序:ContextRefreshedEvent: {}", event);
+      log.info("启动顺序:ContextRefreshedEvent: {}", event);
    }
 
    @Override
    public void start() {
-      log.error("启动顺序:Lifecycle start");
+      log.info("启动顺序:Lifecycle start");
       // Http、MQ、Rpc 入口流量适合 在 SmartLifecyle 中开启
    }
 
    @Override
    public void stop() {
-      log.error("启动顺序:Lifecycle stop");
+      log.info("启动顺序:Lifecycle stop");
    }
 
    @Override

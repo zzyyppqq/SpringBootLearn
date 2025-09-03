@@ -1,4 +1,4 @@
-###
+### 登录
 #@force_http2
 POST {{baseUrl}}/login
 Content-Type: application/json
@@ -16,18 +16,39 @@ Content-Type: application/json
     client.log("response.body.data.token: " + response.body.data.token)
 %}
 
-###
+### 当前用户
 GET {{baseUrl}}/current_user
 Accept: application/json
 Authorization: {{ token }}
 X-Access-Token: {{ token }}
 
 
-###
+### 权限列表
 GET {{baseUrl}}/permissions?page=1&size=1
 Accept: application/json
 Authorization: {{ token }}
 X-Access-Token: {{ token }}
+
+
+### 上传一个文件，并附带一些表单字段
+POST {{baseUrl}}/oss/upload
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+Authorization: {{ token }}
+X-Access-Token: {{ token }}
+
+--WebAppBoundary
+Content-Disposition: form-data; name="file"; filename="HELP.md"
+Content-Type: text/plain
+
+< /Users/aecg/IdeaProjects/SpringBootLearn/HELP.md
+
+--WebAppBoundary
+Content-Disposition: form-data; name="description"
+Content-Type: text/plain
+
+这是一个文件描述
+
+--WebAppBoundary--
 
 
 ###
