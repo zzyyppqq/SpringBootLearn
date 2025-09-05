@@ -1,9 +1,22 @@
 spring:
   application:
     name: SpringBootLearn
-
   profiles:
     active: dev # 默认加载的Profile，可以在启动是通过修改spring.profiles.active属性来变更
+  data:
+    elasticsearch:
+#      cluster-name: my-cluster
+#      cluster-nodes: 192.168.2.99:9300
+      repositories:
+        enabled: true
+  elasticsearch:
+    uris: http://192.168.2.99:9200 # 用于 RestClient，指定 HTTP 端口
+      # 如果使用 TransportClient（已废弃）或特定情况，才需要配置下面的方式
+#      username: elastic
+#      password: 12345678
+
+
+
 
 logging:
   file:
