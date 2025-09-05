@@ -1,0 +1,1070 @@
+{
+  "_shards": {
+    "failed": 0,
+    "skipped": 0,
+    "successful": 1,
+    "total": 1
+  },
+  "hits": {
+    "hits": [
+      {
+        "_id": "0VrrDpkBIc9686RYhEDY",
+        "_index": "kibana_sample_data_ecommerce",
+        "_score": 1,
+        "_source": {
+          "category": [
+            "Men's Clothing"
+          ],
+          "currency": "EUR",
+          "customer_first_name": "Eddie",
+          "customer_full_name": "Eddie Underwood",
+          "customer_gender": "MALE",
+          "customer_id": 38,
+          "customer_last_name": "Underwood",
+          "customer_phone": "",
+          "day_of_week": "Monday",
+          "day_of_week_i": 0,
+          "email": "eddie@underwood-family.zzz",
+          "event": {
+            "dataset": "sample_ecommerce"
+          },
+          "geoip": {
+            "city_name": "Cairo",
+            "continent_name": "Africa",
+            "country_iso_code": "EG",
+            "location": {
+              "lat": 30.1,
+              "lon": 31.3
+            },
+            "region_name": "Cairo Governorate"
+          },
+          "manufacturer": [
+            "Elitelligence",
+            "Oceanavigations"
+          ],
+          "order_date": "2025-09-15T09:28:48+00:00",
+          "order_id": 584677,
+          "products": [
+            {
+              "_id": "sold_product_584677_6283",
+              "base_price": 11.99,
+              "base_unit_price": 11.99,
+              "category": "Men's Clothing",
+              "created_on": "2016-12-26T09:28:48+00:00",
+              "discount_amount": 0,
+              "discount_percentage": 0,
+              "manufacturer": "Elitelligence",
+              "min_price": 6.35,
+              "price": 11.99,
+              "product_id": 6283,
+              "product_name": "Basic T-shirt - dark blue/white",
+              "quantity": 1,
+              "sku": "ZO0549605496",
+              "tax_amount": 0,
+              "taxful_price": 11.99,
+              "taxless_price": 11.99,
+              "unit_discount_amount": 0
+            },
+            {
+              "_id": "sold_product_584677_19400",
+              "base_price": 24.99,
+              "base_unit_price": 24.99,
+              "category": "Men's Clothing",
+              "created_on": "2016-12-26T09:28:48+00:00",
+              "discount_amount": 0,
+              "discount_percentage": 0,
+              "manufacturer": "Oceanavigations",
+              "min_price": 11.75,
+              "price": 24.99,
+              "product_id": 19400,
+              "product_name": "Sweatshirt - grey multicolor",
+              "quantity": 1,
+              "sku": "ZO0299602996",
+              "tax_amount": 0,
+              "taxful_price": 24.99,
+              "taxless_price": 24.99,
+              "unit_discount_amount": 0
+            }
+          ],
+          "sku": [
+            "ZO0549605496",
+            "ZO0299602996"
+          ],
+          "taxful_total_price": 36.98,
+          "taxless_total_price": 36.98,
+          "total_quantity": 2,
+          "total_unique_products": 2,
+          "type": "order",
+          "user": "eddie"
+        },
+        "_type": "_doc"
+      },
+      {
+        "_id": "0lrrDpkBIc9686RYhEDY",
+        "_index": "kibana_sample_data_ecommerce",
+        "_score": 1,
+        "_source": {
+          "category": [
+            "Women's Clothing"
+          ],
+          "currency": "EUR",
+          "customer_first_name": "Mary",
+          "customer_full_name": "Mary Bailey",
+          "customer_gender": "FEMALE",
+          "customer_id": 20,
+          "customer_last_name": "Bailey",
+          "customer_phone": "",
+          "day_of_week": "Sunday",
+          "day_of_week_i": 6,
+          "email": "mary@bailey-family.zzz",
+          "event": {
+            "dataset": "sample_ecommerce"
+          },
+          "geoip": {
+            "city_name": "Dubai",
+            "continent_name": "Asia",
+            "country_iso_code": "AE",
+            "location": {
+              "lat": 25.3,
+              "lon": 55.3
+            },
+            "region_name": "Dubai"
+          },
+          "manufacturer": [
+            "Champion Arts",
+            "Pyramidustries"
+          ],
+          "order_date": "2025-09-14T21:59:02+00:00",
+          "order_id": 584021,
+          "products": [
+            {
+              "_id": "sold_product_584021_11238",
+              "base_price": 24.99,
+              "base_unit_price": 24.99,
+              "category": "Women's Clothing",
+              "created_on": "2016-12-25T21:59:02+00:00",
+              "discount_amount": 0,
+              "discount_percentage": 0,
+              "manufacturer": "Champion Arts",
+              "min_price": 11.75,
+              "price": 24.99,
+              "product_id": 11238,
+              "product_name": "Denim dress - black denim",
+              "quantity": 1,
+              "sku": "ZO0489604896",
+              "tax_amount": 0,
+              "taxful_price": 24.99,
+              "taxless_price": 24.99,
+              "unit_discount_amount": 0
+            },
+            {
+              "_id": "sold_product_584021_20149",
+              "base_price": 28.99,
+              "base_unit_price": 28.99,
+              "category": "Women's Clothing",
+              "created_on": "2016-12-25T21:59:02+00:00",
+              "discount_amount": 0,
+              "discount_percentage": 0,
+              "manufacturer": "Pyramidustries",
+              "min_price": 15.65,
+              "price": 28.99,
+              "product_id": 20149,
+              "product_name": "Shorts - black",
+              "quantity": 1,
+              "sku": "ZO0185501855",
+              "tax_amount": 0,
+              "taxful_price": 28.99,
+              "taxless_price": 28.99,
+              "unit_discount_amount": 0
+            }
+          ],
+          "sku": [
+            "ZO0489604896",
+            "ZO0185501855"
+          ],
+          "taxful_total_price": 53.98,
+          "taxless_total_price": 53.98,
+          "total_quantity": 2,
+          "total_unique_products": 2,
+          "type": "order",
+          "user": "mary"
+        },
+        "_type": "_doc"
+      },
+      {
+        "_id": "01rrDpkBIc9686RYhEDY",
+        "_index": "kibana_sample_data_ecommerce",
+        "_score": 1,
+        "_source": {
+          "category": [
+            "Women's Shoes",
+            "Women's Clothing"
+          ],
+          "currency": "EUR",
+          "customer_first_name": "Gwen",
+          "customer_full_name": "Gwen Butler",
+          "customer_gender": "FEMALE",
+          "customer_id": 26,
+          "customer_last_name": "Butler",
+          "customer_phone": "",
+          "day_of_week": "Sunday",
+          "day_of_week_i": 6,
+          "email": "gwen@butler-family.zzz",
+          "event": {
+            "dataset": "sample_ecommerce"
+          },
+          "geoip": {
+            "city_name": "Los Angeles",
+            "continent_name": "North America",
+            "country_iso_code": "US",
+            "location": {
+              "lat": 34.1,
+              "lon": -118.2
+            },
+            "region_name": "California"
+          },
+          "manufacturer": [
+            "Low Tide Media",
+            "Oceanavigations"
+          ],
+          "order_date": "2025-09-14T22:32:10+00:00",
+          "order_id": 584058,
+          "products": [
+            {
+              "_id": "sold_product_584058_22794",
+              "base_price": 99.99,
+              "base_unit_price": 99.99,
+              "category": "Women's Shoes",
+              "created_on": "2016-12-25T22:32:10+00:00",
+              "discount_amount": 0,
+              "discount_percentage": 0,
+              "manufacturer": "Low Tide Media",
+              "min_price": 46.01,
+              "price": 99.99,
+              "product_id": 22794,
+              "product_name": "Boots - Midnight Blue",
+              "quantity": 1,
+              "sku": "ZO0374603746",
+              "tax_amount": 0,
+              "taxful_price": 99.99,
+              "taxless_price": 99.99,
+              "unit_discount_amount": 0
+            },
+            {
+              "_id": "sold_product_584058_23386",
+              "base_price": 99.99,
+              "base_unit_price": 99.99,
+              "category": "Women's Clothing",
+              "created_on": "2016-12-25T22:32:10+00:00",
+              "discount_amount": 0,
+              "discount_percentage": 0,
+              "manufacturer": "Oceanavigations",
+              "min_price": 53.99,
+              "price": 99.99,
+              "product_id": 23386,
+              "product_name": "Short coat - white/black",
+              "quantity": 1,
+              "sku": "ZO0272202722",
+              "tax_amount": 0,
+              "taxful_price": 99.99,
+              "taxless_price": 99.99,
+              "unit_discount_amount": 0
+            }
+          ],
+          "sku": [
+            "ZO0374603746",
+            "ZO0272202722"
+          ],
+          "taxful_total_price": 199.98,
+          "taxless_total_price": 199.98,
+          "total_quantity": 2,
+          "total_unique_products": 2,
+          "type": "order",
+          "user": "gwen"
+        },
+        "_type": "_doc"
+      },
+      {
+        "_id": "1FrrDpkBIc9686RYhEDY",
+        "_index": "kibana_sample_data_ecommerce",
+        "_score": 1,
+        "_source": {
+          "category": [
+            "Women's Shoes",
+            "Women's Clothing"
+          ],
+          "currency": "EUR",
+          "customer_first_name": "Diane",
+          "customer_full_name": "Diane Chandler",
+          "customer_gender": "FEMALE",
+          "customer_id": 22,
+          "customer_last_name": "Chandler",
+          "customer_phone": "",
+          "day_of_week": "Sunday",
+          "day_of_week_i": 6,
+          "email": "diane@chandler-family.zzz",
+          "event": {
+            "dataset": "sample_ecommerce"
+          },
+          "geoip": {
+            "continent_name": "Europe",
+            "country_iso_code": "GB",
+            "location": {
+              "lat": 51.5,
+              "lon": -0.1
+            }
+          },
+          "manufacturer": [
+            "Primemaster",
+            "Oceanavigations"
+          ],
+          "order_date": "2025-09-14T22:58:05+00:00",
+          "order_id": 584093,
+          "products": [
+            {
+              "_id": "sold_product_584093_12304",
+              "base_price": 74.99,
+              "base_unit_price": 74.99,
+              "category": "Women's Shoes",
+              "created_on": "2016-12-25T22:58:05+00:00",
+              "discount_amount": 0,
+              "discount_percentage": 0,
+              "manufacturer": "Primemaster",
+              "min_price": 34.5,
+              "price": 74.99,
+              "product_id": 12304,
+              "product_name": "High heeled sandals - argento",
+              "quantity": 1,
+              "sku": "ZO0360303603",
+              "tax_amount": 0,
+              "taxful_price": 74.99,
+              "taxless_price": 74.99,
+              "unit_discount_amount": 0
+            },
+            {
+              "_id": "sold_product_584093_19587",
+              "base_price": 99.99,
+              "base_unit_price": 99.99,
+              "category": "Women's Clothing",
+              "created_on": "2016-12-25T22:58:05+00:00",
+              "discount_amount": 0,
+              "discount_percentage": 0,
+              "manufacturer": "Oceanavigations",
+              "min_price": 47.01,
+              "price": 99.99,
+              "product_id": 19587,
+              "product_name": "Classic coat - black",
+              "quantity": 1,
+              "sku": "ZO0272002720",
+              "tax_amount": 0,
+              "taxful_price": 99.99,
+              "taxless_price": 99.99,
+              "unit_discount_amount": 0
+            }
+          ],
+          "sku": [
+            "ZO0360303603",
+            "ZO0272002720"
+          ],
+          "taxful_total_price": 174.98,
+          "taxless_total_price": 174.98,
+          "total_quantity": 2,
+          "total_unique_products": 2,
+          "type": "order",
+          "user": "diane"
+        },
+        "_type": "_doc"
+      },
+      {
+        "_id": "1VrrDpkBIc9686RYhEDY",
+        "_index": "kibana_sample_data_ecommerce",
+        "_score": 1,
+        "_source": {
+          "category": [
+            "Men's Clothing",
+            "Men's Accessories"
+          ],
+          "currency": "EUR",
+          "customer_first_name": "Eddie",
+          "customer_full_name": "Eddie Weber",
+          "customer_gender": "MALE",
+          "customer_id": 38,
+          "customer_last_name": "Weber",
+          "customer_phone": "",
+          "day_of_week": "Monday",
+          "day_of_week_i": 0,
+          "email": "eddie@weber-family.zzz",
+          "event": {
+            "dataset": "sample_ecommerce"
+          },
+          "geoip": {
+            "city_name": "Cairo",
+            "continent_name": "Africa",
+            "country_iso_code": "EG",
+            "location": {
+              "lat": 30.1,
+              "lon": 31.3
+            },
+            "region_name": "Cairo Governorate"
+          },
+          "manufacturer": [
+            "Elitelligence"
+          ],
+          "order_date": "2025-09-08T03:48:58+00:00",
+          "order_id": 574916,
+          "products": [
+            {
+              "_id": "sold_product_574916_11262",
+              "base_price": 59.99,
+              "base_unit_price": 59.99,
+              "category": "Men's Clothing",
+              "created_on": "2016-12-19T03:48:58+00:00",
+              "discount_amount": 0,
+              "discount_percentage": 0,
+              "manufacturer": "Elitelligence",
+              "min_price": 28.2,
+              "price": 59.99,
+              "product_id": 11262,
+              "product_name": "Winter jacket - black",
+              "quantity": 1,
+              "sku": "ZO0542505425",
+              "tax_amount": 0,
+              "taxful_price": 59.99,
+              "taxless_price": 59.99,
+              "unit_discount_amount": 0
+            },
+            {
+              "_id": "sold_product_574916_15713",
+              "base_price": 20.99,
+              "base_unit_price": 20.99,
+              "category": "Men's Accessories",
+              "created_on": "2016-12-19T03:48:58+00:00",
+              "discount_amount": 0,
+              "discount_percentage": 0,
+              "manufacturer": "Elitelligence",
+              "min_price": 10.7,
+              "price": 20.99,
+              "product_id": 15713,
+              "product_name": "Watch - green",
+              "quantity": 1,
+              "sku": "ZO0601306013",
+              "tax_amount": 0,
+              "taxful_price": 20.99,
+              "taxless_price": 20.99,
+              "unit_discount_amount": 0
+            }
+          ],
+          "sku": [
+            "ZO0542505425",
+            "ZO0601306013"
+          ],
+          "taxful_total_price": 80.98,
+          "taxless_total_price": 80.98,
+          "total_quantity": 2,
+          "total_unique_products": 2,
+          "type": "order",
+          "user": "eddie"
+        },
+        "_type": "_doc"
+      },
+      {
+        "_id": "1lrrDpkBIc9686RYhEDY",
+        "_index": "kibana_sample_data_ecommerce",
+        "_score": 1,
+        "_source": {
+          "category": [
+            "Women's Shoes",
+            "Women's Clothing"
+          ],
+          "currency": "EUR",
+          "customer_first_name": "Diane",
+          "customer_full_name": "Diane Goodwin",
+          "customer_gender": "FEMALE",
+          "customer_id": 22,
+          "customer_last_name": "Goodwin",
+          "customer_phone": "",
+          "day_of_week": "Sunday",
+          "day_of_week_i": 6,
+          "email": "diane@goodwin-family.zzz",
+          "event": {
+            "dataset": "sample_ecommerce"
+          },
+          "geoip": {
+            "continent_name": "Europe",
+            "country_iso_code": "GB",
+            "location": {
+              "lat": 51.5,
+              "lon": -0.1
+            }
+          },
+          "manufacturer": [
+            "Low Tide Media",
+            "Pyramidustries"
+          ],
+          "order_date": "2025-09-07T21:44:38+00:00",
+          "order_id": 574586,
+          "products": [
+            {
+              "_id": "sold_product_574586_5419",
+              "base_price": 59.99,
+              "base_unit_price": 59.99,
+              "category": "Women's Shoes",
+              "created_on": "2016-12-18T21:44:38+00:00",
+              "discount_amount": 0,
+              "discount_percentage": 0,
+              "manufacturer": "Low Tide Media",
+              "min_price": 31.79,
+              "price": 59.99,
+              "product_id": 5419,
+              "product_name": "Winter boots - brown",
+              "quantity": 1,
+              "sku": "ZO0376303763",
+              "tax_amount": 0,
+              "taxful_price": 59.99,
+              "taxless_price": 59.99,
+              "unit_discount_amount": 0
+            },
+            {
+              "_id": "sold_product_574586_19325",
+              "base_price": 11.99,
+              "base_unit_price": 11.99,
+              "category": "Women's Clothing",
+              "created_on": "2016-12-18T21:44:38+00:00",
+              "discount_amount": 0,
+              "discount_percentage": 0,
+              "manufacturer": "Pyramidustries",
+              "min_price": 6.47,
+              "price": 11.99,
+              "product_id": 19325,
+              "product_name": "Shorts - dark blue/pink/dark green",
+              "quantity": 1,
+              "sku": "ZO0212402124",
+              "tax_amount": 0,
+              "taxful_price": 11.99,
+              "taxless_price": 11.99,
+              "unit_discount_amount": 0
+            }
+          ],
+          "sku": [
+            "ZO0376303763",
+            "ZO0212402124"
+          ],
+          "taxful_total_price": 71.98,
+          "taxless_total_price": 71.98,
+          "total_quantity": 2,
+          "total_unique_products": 2,
+          "type": "order",
+          "user": "diane"
+        },
+        "_type": "_doc"
+      },
+      {
+        "_id": "11rrDpkBIc9686RYhEDY",
+        "_index": "kibana_sample_data_ecommerce",
+        "_score": 1,
+        "_source": {
+          "category": [
+            "Men's Clothing"
+          ],
+          "currency": "EUR",
+          "customer_first_name": "Oliver",
+          "customer_full_name": "Oliver Rios",
+          "customer_gender": "MALE",
+          "customer_id": 7,
+          "customer_last_name": "Rios",
+          "customer_phone": "",
+          "day_of_week": "Monday",
+          "day_of_week_i": 0,
+          "email": "oliver@rios-family.zzz",
+          "event": {
+            "dataset": "sample_ecommerce"
+          },
+          "geoip": {
+            "continent_name": "Europe",
+            "country_iso_code": "GB",
+            "location": {
+              "lat": 51.5,
+              "lon": -0.1
+            }
+          },
+          "manufacturer": [
+            "Low Tide Media",
+            "Elitelligence"
+          ],
+          "order_date": "2025-09-01T09:27:22+00:00",
+          "order_id": 565855,
+          "products": [
+            {
+              "_id": "sold_product_565855_19919",
+              "base_price": 20.99,
+              "base_unit_price": 20.99,
+              "category": "Men's Clothing",
+              "created_on": "2016-12-12T09:27:22+00:00",
+              "discount_amount": 0,
+              "discount_percentage": 0,
+              "manufacturer": "Low Tide Media",
+              "min_price": 9.87,
+              "price": 20.99,
+              "product_id": 19919,
+              "product_name": "Shirt - dark blue white",
+              "quantity": 1,
+              "sku": "ZO0417504175",
+              "tax_amount": 0,
+              "taxful_price": 20.99,
+              "taxless_price": 20.99,
+              "unit_discount_amount": 0
+            },
+            {
+              "_id": "sold_product_565855_24502",
+              "base_price": 24.99,
+              "base_unit_price": 24.99,
+              "category": "Men's Clothing",
+              "created_on": "2016-12-12T09:27:22+00:00",
+              "discount_amount": 0,
+              "discount_percentage": 0,
+              "manufacturer": "Elitelligence",
+              "min_price": 12.49,
+              "price": 24.99,
+              "product_id": 24502,
+              "product_name": "Slim fit jeans - raw blue",
+              "quantity": 1,
+              "sku": "ZO0535205352",
+              "tax_amount": 0,
+              "taxful_price": 24.99,
+              "taxless_price": 24.99,
+              "unit_discount_amount": 0
+            }
+          ],
+          "sku": [
+            "ZO0417504175",
+            "ZO0535205352"
+          ],
+          "taxful_total_price": 45.98,
+          "taxless_total_price": 45.98,
+          "total_quantity": 2,
+          "total_unique_products": 2,
+          "type": "order",
+          "user": "oliver"
+        },
+        "_type": "_doc"
+      },
+      {
+        "_id": "2FrrDpkBIc9686RYhEDY",
+        "_index": "kibana_sample_data_ecommerce",
+        "_score": 1,
+        "_source": {
+          "category": [
+            "Men's Clothing",
+            "Men's Accessories",
+            "Men's Shoes"
+          ],
+          "currency": "EUR",
+          "customer_first_name": "Abd",
+          "customer_full_name": "Abd Sutton",
+          "customer_gender": "MALE",
+          "customer_id": 52,
+          "customer_last_name": "Sutton",
+          "customer_phone": "",
+          "day_of_week": "Monday",
+          "day_of_week_i": 0,
+          "email": "abd@sutton-family.zzz",
+          "event": {
+            "dataset": "sample_ecommerce"
+          },
+          "geoip": {
+            "city_name": "Cairo",
+            "continent_name": "Africa",
+            "country_iso_code": "EG",
+            "location": {
+              "lat": 30.1,
+              "lon": 31.3
+            },
+            "region_name": "Cairo Governorate"
+          },
+          "manufacturer": [
+            "Low Tide Media",
+            "Oceanavigations",
+            "Elitelligence"
+          ],
+          "order_date": "2025-09-15T02:19:41+00:00",
+          "order_id": 723055,
+          "products": [
+            {
+              "_id": "sold_product_723055_11751",
+              "base_price": 28.99,
+              "base_unit_price": 28.99,
+              "category": "Men's Clothing",
+              "created_on": "2016-12-26T02:19:41+00:00",
+              "discount_amount": 0,
+              "discount_percentage": 0,
+              "manufacturer": "Low Tide Media",
+              "min_price": 14.78,
+              "price": 28.99,
+              "product_id": 11751,
+              "product_name": "Shorts - beige",
+              "quantity": 1,
+              "sku": "ZO0423104231",
+              "tax_amount": 0,
+              "taxful_price": 28.99,
+              "taxless_price": 28.99,
+              "unit_discount_amount": 0
+            },
+            {
+              "_id": "sold_product_723055_13452",
+              "base_price": 41.99,
+              "base_unit_price": 41.99,
+              "category": "Men's Accessories",
+              "created_on": "2016-12-26T02:19:41+00:00",
+              "discount_amount": 0,
+              "discount_percentage": 0,
+              "manufacturer": "Oceanavigations",
+              "min_price": 20.58,
+              "price": 41.99,
+              "product_id": 13452,
+              "product_name": "Weekend bag - black",
+              "quantity": 1,
+              "sku": "ZO0314203142",
+              "tax_amount": 0,
+              "taxful_price": 41.99,
+              "taxless_price": 41.99,
+              "unit_discount_amount": 0
+            },
+            {
+              "_id": "sold_product_723055_22434",
+              "base_price": 59.99,
+              "base_unit_price": 59.99,
+              "category": "Men's Shoes",
+              "created_on": "2016-12-26T02:19:41+00:00",
+              "discount_amount": 0,
+              "discount_percentage": 0,
+              "manufacturer": "Low Tide Media",
+              "min_price": 30.01,
+              "price": 59.99,
+              "product_id": 22434,
+              "product_name": "Casual lace-ups - cognac",
+              "quantity": 1,
+              "sku": "ZO0394403944",
+              "tax_amount": 0,
+              "taxful_price": 59.99,
+              "taxless_price": 59.99,
+              "unit_discount_amount": 0
+            },
+            {
+              "_id": "sold_product_723055_7059",
+              "base_price": 7.99,
+              "base_unit_price": 7.99,
+              "category": "Men's Clothing",
+              "created_on": "2016-12-26T02:19:41+00:00",
+              "discount_amount": 0,
+              "discount_percentage": 0,
+              "manufacturer": "Elitelligence",
+              "min_price": 3.76,
+              "price": 7.99,
+              "product_id": 7059,
+              "product_name": "Print T-shirt - off white/green",
+              "quantity": 1,
+              "sku": "ZO0561805618",
+              "tax_amount": 0,
+              "taxful_price": 7.99,
+              "taxless_price": 7.99,
+              "unit_discount_amount": 0
+            }
+          ],
+          "sku": [
+            "ZO0423104231",
+            "ZO0314203142",
+            "ZO0394403944",
+            "ZO0561805618"
+          ],
+          "taxful_total_price": 138.96,
+          "taxless_total_price": 138.96,
+          "total_quantity": 4,
+          "total_unique_products": 4,
+          "type": "order",
+          "user": "abd"
+        },
+        "_type": "_doc"
+      },
+      {
+        "_id": "2VrrDpkBIc9686RYhEDY",
+        "_index": "kibana_sample_data_ecommerce",
+        "_score": 1,
+        "_source": {
+          "category": [
+            "Women's Accessories",
+            "Women's Clothing"
+          ],
+          "currency": "EUR",
+          "customer_first_name": "Wilhemina St.",
+          "customer_full_name": "Wilhemina St. Tran",
+          "customer_gender": "FEMALE",
+          "customer_id": 17,
+          "customer_last_name": "Tran",
+          "customer_phone": "",
+          "day_of_week": "Sunday",
+          "day_of_week_i": 6,
+          "email": "wilhemina st.@tran-family.zzz",
+          "event": {
+            "dataset": "sample_ecommerce"
+          },
+          "geoip": {
+            "city_name": "Monte Carlo",
+            "continent_name": "Europe",
+            "country_iso_code": "MC",
+            "location": {
+              "lat": 43.7,
+              "lon": 7.4
+            }
+          },
+          "manufacturer": [
+            "Pyramidustries",
+            "Tigress Enterprises",
+            "Pyramidustries active",
+            "Oceanavigations"
+          ],
+          "order_date": "2025-09-07T00:59:02+00:00",
+          "order_id": 727462,
+          "products": [
+            {
+              "_id": "sold_product_727462_12012",
+              "base_price": 8.99,
+              "base_unit_price": 8.99,
+              "category": "Women's Accessories",
+              "created_on": "2016-12-18T00:59:02+00:00",
+              "discount_amount": 0,
+              "discount_percentage": 0,
+              "manufacturer": "Pyramidustries",
+              "min_price": 4.14,
+              "price": 8.99,
+              "product_id": 12012,
+              "product_name": "Mittens - grey",
+              "quantity": 1,
+              "sku": "ZO0186801868",
+              "tax_amount": 0,
+              "taxful_price": 8.99,
+              "taxless_price": 8.99,
+              "unit_discount_amount": 0
+            },
+            {
+              "_id": "sold_product_727462_16471",
+              "base_price": 20.99,
+              "base_unit_price": 20.99,
+              "category": "Women's Clothing",
+              "created_on": "2016-12-18T00:59:02+00:00",
+              "discount_amount": 0,
+              "discount_percentage": 0,
+              "manufacturer": "Tigress Enterprises",
+              "min_price": 9.66,
+              "price": 20.99,
+              "product_id": 16471,
+              "product_name": "Vest - black/Chocolate",
+              "quantity": 1,
+              "sku": "ZO0074100741",
+              "tax_amount": 0,
+              "taxful_price": 20.99,
+              "taxless_price": 20.99,
+              "unit_discount_amount": 0
+            },
+            {
+              "_id": "sold_product_727462_10554",
+              "base_price": 16.99,
+              "base_unit_price": 16.99,
+              "category": "Women's Clothing",
+              "created_on": "2016-12-18T00:59:02+00:00",
+              "discount_amount": 0,
+              "discount_percentage": 0,
+              "manufacturer": "Pyramidustries active",
+              "min_price": 7.82,
+              "price": 16.99,
+              "product_id": 10554,
+              "product_name": "Tracksuit bottoms - Pale Violet Red",
+              "quantity": 1,
+              "sku": "ZO0223202232",
+              "tax_amount": 0,
+              "taxful_price": 16.99,
+              "taxless_price": 16.99,
+              "unit_discount_amount": 0
+            },
+            {
+              "_id": "sold_product_727462_22882",
+              "base_price": 41.99,
+              "base_unit_price": 41.99,
+              "category": "Women's Clothing",
+              "created_on": "2016-12-18T00:59:02+00:00",
+              "discount_amount": 0,
+              "discount_percentage": 0,
+              "manufacturer": "Oceanavigations",
+              "min_price": 23.09,
+              "price": 41.99,
+              "product_id": 22882,
+              "product_name": "Cardigan - black",
+              "quantity": 1,
+              "sku": "ZO0267602676",
+              "tax_amount": 0,
+              "taxful_price": 41.99,
+              "taxless_price": 41.99,
+              "unit_discount_amount": 0
+            }
+          ],
+          "sku": [
+            "ZO0186801868",
+            "ZO0074100741",
+            "ZO0223202232",
+            "ZO0267602676"
+          ],
+          "taxful_total_price": 88.96,
+          "taxless_total_price": 88.96,
+          "total_quantity": 4,
+          "total_unique_products": 4,
+          "type": "order",
+          "user": "wilhemina"
+        },
+        "_type": "_doc"
+      },
+      {
+        "_id": "2lrrDpkBIc9686RYhEDY",
+        "_index": "kibana_sample_data_ecommerce",
+        "_score": 1,
+        "_source": {
+          "category": [
+            "Women's Shoes",
+            "Women's Clothing"
+          ],
+          "currency": "EUR",
+          "customer_first_name": "Rabbia Al",
+          "customer_full_name": "Rabbia Al Baker",
+          "customer_gender": "FEMALE",
+          "customer_id": 5,
+          "customer_last_name": "Baker",
+          "customer_phone": "",
+          "day_of_week": "Monday",
+          "day_of_week_i": 0,
+          "email": "rabbia al@baker-family.zzz",
+          "event": {
+            "dataset": "sample_ecommerce"
+          },
+          "geoip": {
+            "city_name": "Dubai",
+            "continent_name": "Asia",
+            "country_iso_code": "AE",
+            "location": {
+              "lat": 25.3,
+              "lon": 55.3
+            },
+            "region_name": "Dubai"
+          },
+          "manufacturer": [
+            "Oceanavigations",
+            "Tigress Enterprises",
+            "Champion Arts",
+            "Pyramidustries"
+          ],
+          "order_date": "2025-09-15T03:41:46+00:00",
+          "order_id": 727269,
+          "products": [
+            {
+              "_id": "sold_product_727269_22880",
+              "base_price": 74.99,
+              "base_unit_price": 74.99,
+              "category": "Women's Shoes",
+              "created_on": "2016-12-26T03:41:46+00:00",
+              "discount_amount": 0,
+              "discount_percentage": 0,
+              "manufacturer": "Oceanavigations",
+              "min_price": 35.25,
+              "price": 74.99,
+              "product_id": 22880,
+              "product_name": "Boots - black",
+              "quantity": 1,
+              "sku": "ZO0249902499",
+              "tax_amount": 0,
+              "taxful_price": 74.99,
+              "taxless_price": 74.99,
+              "unit_discount_amount": 0
+            },
+            {
+              "_id": "sold_product_727269_12484",
+              "base_price": 32.99,
+              "base_unit_price": 32.99,
+              "category": "Women's Clothing",
+              "created_on": "2016-12-26T03:41:46+00:00",
+              "discount_amount": 0,
+              "discount_percentage": 0,
+              "manufacturer": "Tigress Enterprises",
+              "min_price": 17.48,
+              "price": 32.99,
+              "product_id": 12484,
+              "product_name": "Cardigan - black/white",
+              "quantity": 1,
+              "sku": "ZO0068400684",
+              "tax_amount": 0,
+              "taxful_price": 32.99,
+              "taxless_price": 32.99,
+              "unit_discount_amount": 0
+            },
+            {
+              "_id": "sold_product_727269_21362",
+              "base_price": 13.99,
+              "base_unit_price": 13.99,
+              "category": "Women's Clothing",
+              "created_on": "2016-12-26T03:41:46+00:00",
+              "discount_amount": 0,
+              "discount_percentage": 0,
+              "manufacturer": "Champion Arts",
+              "min_price": 6.58,
+              "price": 13.99,
+              "product_id": 21362,
+              "product_name": "Long sleeved top - blue",
+              "quantity": 1,
+              "sku": "ZO0494704947",
+              "tax_amount": 0,
+              "taxful_price": 13.99,
+              "taxless_price": 13.99,
+              "unit_discount_amount": 0
+            },
+            {
+              "_id": "sold_product_727269_13854",
+              "base_price": 49.99,
+              "base_unit_price": 49.99,
+              "category": "Women's Shoes",
+              "created_on": "2016-12-26T03:41:46+00:00",
+              "discount_amount": 0,
+              "discount_percentage": 0,
+              "manufacturer": "Pyramidustries",
+              "min_price": 25.49,
+              "price": 49.99,
+              "product_id": 13854,
+              "product_name": "Lace-up boots - black",
+              "quantity": 1,
+              "sku": "ZO0143401434",
+              "tax_amount": 0,
+              "taxful_price": 49.99,
+              "taxless_price": 49.99,
+              "unit_discount_amount": 0
+            }
+          ],
+          "sku": [
+            "ZO0249902499",
+            "ZO0068400684",
+            "ZO0494704947",
+            "ZO0143401434"
+          ],
+          "taxful_total_price": 171.96,
+          "taxless_total_price": 171.96,
+          "total_quantity": 4,
+          "total_unique_products": 4,
+          "type": "order",
+          "user": "rabbia"
+        },
+        "_type": "_doc"
+      }
+    ],
+    "max_score": 1,
+    "total": {
+      "relation": "eq",
+      "value": 4675
+    }
+  },
+  "timed_out": false,
+  "took": 7
+}

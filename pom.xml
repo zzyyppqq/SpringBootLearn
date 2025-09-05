@@ -138,9 +138,36 @@
             <version>3.11</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-elasticsearch</artifactId>
+        </dependency>
 
+        <dependency>
+            <groupId>org.elasticsearch.plugin</groupId>
+            <artifactId>x-pack-sql-jdbc</artifactId>
+            <version>7.17.3</version> <!-- 请确保此版本与ES服务器版本一致 -->
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-webflux</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.54</version>
+        </dependency>
 
     </dependencies>
+
+    <repositories>
+        <repository>
+            <id>elastic.co</id>
+            <url>https://artifacts.elastic.co/maven</url>
+        </repository>
+    </repositories>
 
     <build>
         <plugins>

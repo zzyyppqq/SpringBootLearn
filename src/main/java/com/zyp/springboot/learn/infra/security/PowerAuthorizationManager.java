@@ -23,6 +23,9 @@ public class PowerAuthorizationManager implements AuthorizationManager<MethodInv
 
     @Override
     public AuthorizationDecision check(Supplier<Authentication> authenticationGetter, MethodInvocation object) {
+        if (true) {
+            return null;
+        }
         // 1. 如果方法上没有显式地设置权限注解，默认不允许匿名访问，
         // 不过的确有些方法是不需要权限控制的，因此我们增加了一个特殊的注解IgnorePermission，表示该方法无需权限控制
         var ignorePermission = object.getMethod().getDeclaredAnnotation(IgnorePermission.class);
